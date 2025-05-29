@@ -1,0 +1,5 @@
+CFBundleDisplayName = "Собака";
+CFBundleName = "Собака";
+NSPhotoLibraryUsageDescription = "Приложению нужен доступ к фотографиям для добавления фото собак.";
+NSCameraUsageDescription = "Приложению нужен доступ к камере для фотографирования собак.";
+NSLocationWhenInUseUsageDescription = "Приложению нужен доступ к геолокации для записи маршрутов прогулок."; 

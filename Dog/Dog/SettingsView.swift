@@ -35,24 +35,20 @@ struct SettingsView: View {
         logger.log("Changing language to: \(newLanguage)")
         
         // Сохраняем новый язык во все необходимые места
-        UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
-        UserDefaults.standard.setValue(newLanguage, forKey: "AppleLocale")
-        UserDefaults.standard.setValue(newLanguage, forKey: "AppleLanguages")
-        UserDefaults.standard.setValue(newLanguage, forKey: "appLanguage")
-        UserDefaults.standard.setValue(newLanguage == "ru" ? "RU" : "US", forKey: "AppleTerritory")
+        UserDefaults.standard.set([newLanguage], forKey: "AppleLanguages")
+        UserDefaults.standard.set(newLanguage, forKey: "AppleLocale")
+        UserDefaults.standard.set(newLanguage, forKey: "appLanguage")
+        UserDefaults.standard.set(newLanguage == "ru" ? "RU" : "US", forKey: "AppleTerritory")
         UserDefaults.standard.synchronize()
         
         // Обновляем appLanguage
         appLanguage = newLanguage
         
-        // Перезагружаем Bundle
-        Bundle.main.localizations
-        if let languagePath = Bundle.main.path(forResource: newLanguage, ofType: "lproj") {
-            logger.log("Found language bundle at: \(languagePath)")
-        }
-        
         // Перезагружаем view
         appState.reload()
+        
+        // Принудительно перезапускаем приложение
+        exit(0)
     }
     
     var body: some View {

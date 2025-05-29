@@ -20,63 +20,46 @@ struct DogApp: App {
     init() {
         logger.log("App initializing...")
         
-        // Принудительно применяем язык при запуске
-        let savedLanguage = UserDefaults.standard.string(forKey: "appLanguage") ?? "ru"
-        
-        // Устанавливаем язык для всего приложения
-        UserDefaults.standard.setValue([savedLanguage], forKey: "AppleLanguages")
-        UserDefaults.standard.setValue(savedLanguage, forKey: "AppleLocale")
-        UserDefaults.standard.setValue(savedLanguage, forKey: "appLanguage")
-        
-        // Устанавливаем регион
-        UserDefaults.standard.setValue(savedLanguage, forKey: "AppleLocale")
-        UserDefaults.standard.setValue([savedLanguage], forKey: "AppleLanguages")
-        UserDefaults.standard.setValue(savedLanguage == "ru" ? "RU" : "US", forKey: "AppleTerritory")
-        
-        // Принудительно применяем настройки
+        // Принудительно устанавливаем русский язык
+        UserDefaults.standard.set("ru", forKey: "appLanguage")
+        UserDefaults.standard.set(["ru"], forKey: "AppleLanguages")
+        UserDefaults.standard.set("ru", forKey: "AppleLocale")
+        UserDefaults.standard.set("RU", forKey: "AppleTerritory")
         UserDefaults.standard.synchronize()
         
-        // Перезагружаем Bundle
-        Bundle.main.localizations
-        if let languagePath = Bundle.main.path(forResource: savedLanguage, ofType: "lproj") {
-            logger.log("Found language bundle at: \(languagePath)")
-        } else {
-            logger.log("Warning: Could not find language bundle for: \(savedLanguage)")
-        }
-        
-        // Проверяем текущую локализацию
-        logger.log("Current localizations: \(Bundle.main.preferredLocalizations)")
+        // Проверяем локализацию
+        logger.log("Current language: \(UserDefaults.standard.string(forKey: "appLanguage") ?? "unknown")")
+        logger.log("Current languages: \(UserDefaults.standard.array(forKey: "AppleLanguages") ?? [])")
+        logger.log("Current locale: \(UserDefaults.standard.string(forKey: "AppleLocale") ?? "unknown")")
     }
     
     var body: some Scene {
         WindowGroup {
             if shouldReload {
                 Color.clear.onAppear {
-                    // Повторно применяем язык после перезагрузки
-                    UserDefaults.standard.setValue([appLanguage], forKey: "AppleLanguages")
-                    UserDefaults.standard.setValue(appLanguage, forKey: "AppleLocale")
-                    UserDefaults.standard.synchronize()
-                    
                     shouldReload = false
                 }
             } else {
                 ContentView()
-                    .environment(\.locale, Locale(identifier: appLanguage))
+                    .environment(\.locale, Locale(identifier: "ru"))
                     .environment(\.managedObjectContext, dataController.container.viewContext)
                     .environmentObject(dataController)
                     .preferredColorScheme(isDarkMode ? .dark : .light)
                     .environmentObject(AppState(reloadAction: {
+                        // Форсированная перезагрузка view
                         shouldReload = true
+                        UserDefaults.standard.set(["ru"], forKey: "AppleLanguages")
+                        UserDefaults.standard.synchronize()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                             shouldReload = false
                         }
                     }))
                     .onAppear {
-                        logger.log("ContentView appeared with language: \(appLanguage)")
-                    }
-                    .onOpenURL { url in
-                        if url.scheme == Bundle.main.bundleIdentifier && url.host == "restart" {
-                            // Приложение было перезапущено через URL схему
+                        // Проверяем язык при каждом появлении view
+                        logger.log("View appeared, current language: \(appLanguage)")
+                        if appLanguage != "ru" {
+                            appLanguage = "ru"
+                            UserDefaults.standard.set(["ru"], forKey: "AppleLanguages")
                             UserDefaults.standard.synchronize()
                         }
                     }

@@ -11,34 +11,41 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var dataController: DataController
+    @AppStorage("appLanguage") private var appLanguage = "ru"
     
     var body: some View {
         TabView {
             DashboardView()
                 .tabItem {
-                    Label(LocalizedStringKey("dashboard.title"), systemImage: "house")
+                    Image(systemName: "house.fill")
+                    Text(LocalizedStringKey("dashboard.title"))
                 }
             
             CalendarView()
                 .tabItem {
-                    Label(LocalizedStringKey("calendar.title"), systemImage: "calendar")
+                    Image(systemName: "calendar")
+                    Text(LocalizedStringKey("calendar.title"))
                 }
             
             AnalyticsView()
                 .tabItem {
-                    Label(LocalizedStringKey("analytics.title"), systemImage: "chart.bar")
+                    Image(systemName: "chart.bar.fill")
+                    Text(LocalizedStringKey("analytics.title"))
                 }
             
             KnowledgeBaseView()
                 .tabItem {
-                    Label(LocalizedStringKey("knowledge.title"), systemImage: "book")
+                    Image(systemName: "book.fill")
+                    Text(LocalizedStringKey("knowledge.title"))
                 }
             
             SettingsView()
                 .tabItem {
-                    Label(LocalizedStringKey("settings.title"), systemImage: "gear")
+                    Image(systemName: "gear")
+                    Text(LocalizedStringKey("settings.title"))
                 }
         }
+        .environment(\.locale, Locale(identifier: appLanguage))
     }
 }
 
