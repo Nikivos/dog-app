@@ -1,0 +1,72 @@
+// Общие
+"ok" = "OK";
+"cancel" = "Отмена";
+"save" = "Сохранить";
+"error" = "Ошибка";
+
+// Вкладки
+"dashboard.title" = "Главная";
+"calendar.title" = "Календарь";
+"analytics.title" = "Аналитика";
+"knowledge.title" = "Справочник";
+"settings.title" = "Настройки";
+
+// Добавление собаки
+"add.dog.title" = "Новая собака";
+"add.dog.photo" = "Фото";
+"add.dog.basic.info" = "Основная информация";
+"add.dog.name" = "Кличка";
+"add.dog.breed" = "Порода";
+"add.dog.birth.date" = "Дата рождения";
+"add.dog.weight" = "Вес (кг)";
+"add.dog.health.notes" = "Заметки о здоровье";
+"add.dog.error.image.size" = "Размер фото не должен превышать 5MB";
+"add.dog.error.weight" = "Вес должен быть от 0 до 200 кг";
+
+// Календарь
+"calendar.activity.time" = "Время";
+"calendar.activity.type" = "Тип активности";
+"calendar.activity.duration" = "%d мин";
+"calendar.activity.location" = "Место";
+"calendar.add.activity" = "Добавить активность";
+
+// Типы активности
+"activity.walk" = "Прогулка";
+"activity.feed" = "Кормление";
+"activity.vet" = "Ветеринар";
+"activity.medicine" = "Лекарства";
+"activity.grooming" = "Груминг";
+
+// Аналитика
+"analytics.time.range.week" = "Неделя";
+"analytics.time.range.month" = "Месяц";
+"analytics.time.range.year" = "Год";
+"analytics.weight.history" = "История веса";
+"analytics.activity.summary" = "Сводка активности";
+"analytics.average.walk" = "Средняя прогулка";
+"analytics.feedings.per.day" = "Кормлений в день";
+
+// Справочник
+"knowledge.nutrition" = "Питание";
+"knowledge.health" = "Здоровье";
+"knowledge.training" = "Дрессировка";
+"knowledge.grooming" = "Груминг";
+
+// Настройки
+"settings.appearance" = "Внешний вид";
+"settings.dark.mode" = "Темная тема";
+"settings.metric.system" = "Метрическая система";
+"settings.language" = "Язык";
+"settings.notifications" = "Уведомления";
+"settings.notifications.enable" = "Включить уведомления";
+"settings.notifications.settings" = "Настройки уведомлений";
+"settings.data" = "Данные";
+"settings.export.format" = "Формат экспорта";
+"settings.export.data" = "Экспорт данных";
+"settings.reset.data" = "Сброс данных";
+"settings.reset.confirmation" = "Вы уверены, что хотите удалить все данные? Это действие нельзя отменить.";
+"settings.backup" = "Резервное копирование";
+"settings.backup.create" = "Создать резервную копию";
+"settings.backup.restore" = "Восстановить из копии";
+"settings.backup.restore.confirm" = "Восстановление из резервной копии";
+"settings.backup.restore.warning" = "Это действие заменит все текущие данные. Продолжить?"; 

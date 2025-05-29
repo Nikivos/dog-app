@@ -1,0 +1,78 @@
+// Common
+"ok" = "OK";
+"cancel" = "Cancel";
+"save" = "Save";
+"error" = "Error";
+
+// Tabs
+"dashboard.title" = "Dashboard";
+"calendar.title" = "Calendar";
+"analytics.title" = "Analytics";
+"knowledge.title" = "Knowledge";
+"settings.title" = "Settings";
+
+// Add Dog
+"add.dog.title" = "New Dog";
+"add.dog.photo" = "Photo";
+"add.dog.basic.info" = "Basic Information";
+"add.dog.name" = "Name";
+"add.dog.breed" = "Breed";
+"add.dog.birth.date" = "Birth Date";
+"add.dog.weight" = "Weight (kg)";
+"add.dog.health.notes" = "Health Notes";
+"add.dog.error.image.size" = "Photo size must not exceed 5MB";
+"add.dog.error.weight" = "Weight must be between 0 and 200 kg";
+
+// Calendar
+"calendar.activity.time" = "Time";
+"calendar.activity.type" = "Activity Type";
+"calendar.activity.duration" = "%d min";
+"calendar.activity.location" = "Location";
+"calendar.add.activity" = "Add Activity";
+
+// Activity Types
+"activity.walk" = "Walk";
+"activity.feed" = "Feed";
+"activity.vet" = "Vet";
+"activity.medicine" = "Medicine";
+"activity.grooming" = "Grooming";
+
+// Analytics
+"analytics.time.range.week" = "Week";
+"analytics.time.range.month" = "Month";
+"analytics.time.range.year" = "Year";
+"analytics.weight.history" = "Weight History";
+"analytics.activity.summary" = "Activity Summary";
+"analytics.average.walk" = "Average Walk";
+"analytics.feedings.per.day" = "Feedings per Day";
+
+// Knowledge Base
+"knowledge.nutrition" = "Nutrition";
+"knowledge.health" = "Health";
+"knowledge.training" = "Training";
+"knowledge.grooming" = "Grooming";
+
+// Settings
+"settings.appearance" = "Appearance";
+"settings.dark.mode" = "Dark Mode";
+"settings.metric.system" = "Metric System";
+"settings.language" = "Language";
+"settings.notifications" = "Notifications";
+"settings.notifications.enable" = "Enable Notifications";
+"settings.notifications.settings" = "Notification Settings";
+"settings.data" = "Data";
+"settings.export.format" = "Export Format";
+"settings.export.data" = "Export Data";
+"settings.reset.data" = "Reset Data";
+"settings.reset.confirmation" = "Are you sure you want to delete all data? This action cannot be undone.";
+"settings.backup" = "Backup";
+"settings.backup.create" = "Create Backup";
+"settings.backup.restore" = "Restore from Backup";
+"settings.backup.restore.confirm" = "Restore from Backup";
+"settings.backup.restore.warning" = "This will replace all current data. Continue?";
+
+// Language Change
+"settings.language.change.title" = "Language Change";
+"settings.language.change.message" = "The app needs to be restarted to apply the new language. Would you like to restart now?";
+"settings.language.restart.now" = "Restart Now";
+"settings.language.restart.later" = "Later"; 
