@@ -67,16 +67,42 @@
 "settings.data" = "Данные";
 "settings.export.format" = "Формат экспорта";
 "settings.export.data" = "Экспорт данных";
-"settings.reset.data" = "Сброс данных";
-"settings.reset.confirmation" = "Вы уверены, что хотите удалить все данные? Это действие нельзя отменить.";
+"settings.reset.data" = "Сбросить данные";
+"settings.reset.confirmation" = "Вы уверены, что хотите сбросить все данные? Это действие нельзя отменить.";
 "settings.backup" = "Резервное копирование";
 "settings.backup.create" = "Создать резервную копию";
 "settings.backup.restore" = "Восстановить из копии";
-"settings.backup.restore.confirm" = "Восстановление из резервной копии";
+"settings.backup.restore.confirm" = "Восстановить данные?";
 "settings.backup.restore.warning" = "Это действие заменит все текущие данные. Продолжить?";
 
 // Language Change
-"settings.language.change.title" = "Смена языка";
-"settings.language.change.message" = "Для применения нового языка необходимо перезапустить приложение. Перезапустить сейчас?";
-"settings.language.restart.now" = "Перезапустить";
-"settings.language.restart.later" = "Позже"; 
+"settings.language.change.title" = "Изменить язык";
+"settings.language.change.message" = "Для применения изменений требуется перезапуск приложения.";
+"settings.language.restart.now" = "Перезапустить сейчас";
+"settings.language.restart.later" = "Позже";
+
+"dog.add" = "Добавить собаку";
+"dog.name" = "Кличка";
+"dog.breed" = "Порода";
+"dog.birthday" = "Дата рождения";
+"dog.weight" = "Вес";
+"dog.height" = "Рост";
+"dog.gender" = "Пол";
+"dog.gender.male" = "Кобель";
+"dog.gender.female" = "Сука";
+"dog.color" = "Окрас";
+"dog.notes" = "Заметки";
+
+"activity.feeding" = "Кормление";
+"activity.training" = "Тренировка";
+
+"calendar.today" = "Сегодня";
+"calendar.add.event" = "Добавить событие";
+
+"analytics.weight" = "График веса";
+"analytics.activity" = "Активность";
+"analytics.health" = "Здоровье";
+
+"knowledge.breeds" = "Породы";
+"knowledge.training" = "Дрессировка";
+"knowledge.nutrition" = "Питание"; 

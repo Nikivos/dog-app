@@ -9,7 +9,7 @@ struct SettingsView: View {
     @AppStorage("useMetricSystem") private var useMetricSystem = true
     @AppStorage("notificationsEnabled") private var notificationsEnabled = true
     @AppStorage("exportFormat") private var exportFormat = "PDF"
-    @AppStorage("appLanguage") private var appLanguage = "en"
+    @AppStorage("appLanguage") private var appLanguage = "ru"
     
     @StateObject private var backupManager = BackupManager.shared
     @EnvironmentObject private var appState: AppState
@@ -22,13 +22,13 @@ struct SettingsView: View {
     @State private var showingResetAlert = false
     @State private var showingNotificationSettings = false
     @State private var showingLanguageAlert = false
-    @State private var newLanguage: String = "en"
+    @State private var newLanguage: String = "ru"
     
     private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "Dog", category: "Settings")
     private let exportFormats = ["PDF", "CSV"]
     private let languages = [
-        ("en", "English"),
-        ("ru", "Русский")
+        ("ru", "Русский"),
+        ("en", "English")
     ]
     
     private func changeLanguage() {

@@ -11,7 +11,7 @@ import os.log
 @main
 struct DogApp: App {
     @StateObject private var dataController = DataController.shared
-    @AppStorage("appLanguage") private var appLanguage = "en"
+    @AppStorage("appLanguage") private var appLanguage = "ru"
     @AppStorage("isDarkMode") private var isDarkMode = false
     @State private var shouldReload = false
     
@@ -21,7 +21,7 @@ struct DogApp: App {
         logger.log("App initializing...")
         
         // Принудительно применяем язык при запуске
-        let savedLanguage = UserDefaults.standard.string(forKey: "appLanguage") ?? "en"
+        let savedLanguage = UserDefaults.standard.string(forKey: "appLanguage") ?? "ru"
         
         // Устанавливаем язык для всего приложения
         UserDefaults.standard.setValue([savedLanguage], forKey: "AppleLanguages")

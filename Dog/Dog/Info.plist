@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleDevelopmentRegion</key>
-    <string>en</string>
+    <string>ru</string>
     <key>CFBundleLocalizations</key>
     <array>
-        <string>en</string>
         <string>ru</string>
+        <string>en</string>
     </array>
     <key>LSHasLocalizedDisplayName</key>
     <true/>
     <key>CFBundleAllowMixedLocalizations</key>
     <true/>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>This app needs access to your photo library to add dog photos.</string>
+    <string>Приложению нужен доступ к фотографиям для добавления фото собак.</string>
     <key>NSCameraUsageDescription</key>
-    <string>This app needs access to your camera to take dog photos.</string>
+    <string>Приложению нужен доступ к камере для фотографирования собак.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>This app needs access to your location to record walk locations.</string>
+    <string>Приложению нужен доступ к геолокации для записи маршрутов прогулок.</string>
     <key>UIBackgroundModes</key>
     <array>
         <string>fetch</string>
